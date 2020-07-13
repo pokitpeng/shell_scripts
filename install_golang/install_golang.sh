@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
+
+# 使用方法：curl -sLf https://raw.githubusercontent.com/pokitpeng/shell_scripts/master/install_golang/install_golang.sh | bash
+
 # 遇到错误退出
 set -e
 # 调试模式
