@@ -7,8 +7,8 @@ set -e
 # 调试模式
 # set -x 
 # 1.设置变量
-GOROOT=/opt/go
-GOPATH=/opt/gopath
+GOROOT=/usr/local/
+GOPATH=/usr/local/gopath/
 GOVERSION=1.13.12
 function setGoEnv() {
     cat <<EOF >>~/.bashrc
