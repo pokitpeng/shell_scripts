@@ -7,8 +7,9 @@ set -e
 # 调试模式
 # set -x 
 # 1.设置变量
-GOROOT=/usr/local/
-GOPATH=/usr/local/gopath/
+PKG_DIR=/usr/local
+GOROOT=${PKG_DIR}/go
+GOPATH=${PKG_DIR}/gopath
 GOVERSION=1.13.12
 function setGoEnv() {
     cat <<EOF >>~/.bashrc
@@ -25,7 +26,7 @@ rm -rf ${GOROOT} ${GOPATH} /usr/bin/go
 mkdir -p ${GOROOT} ${GOPATH}
 # 3.下载解压
 curl -O --insecure https://dl.google.com/go/go${GOVERSION}.linux-amd64.tar.gz
-tar zxvf go${GOVERSION}.linux-amd64.tar.gz -C /opt/
+tar zxvf go${GOVERSION}.linux-amd64.tar.gz -C ${PKG_DIR}
 # 4.设置软链接
 ln -s ${GOROOT}/bin/go /usr/bin/go
 # 5.设置环境变量
