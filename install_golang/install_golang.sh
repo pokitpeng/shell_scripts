@@ -26,7 +26,7 @@ rm -rf ${GOROOT} ${GOPATH} /usr/bin/go
 mkdir -p ${GOROOT} ${GOPATH}
 # 3.下载解压
 curl -O --insecure https://dl.google.com/go/go${GOVERSION}.linux-amd64.tar.gz
-tar zxvf go${GOVERSION}.linux-amd64.tar.gz -C ${PKG_DIR}
+tar zxvf go${GOVERSION}.linux-amd64.tar.gz -C ${PKG_DIR}  >/dev/null 2>&1
 # 4.设置软链接
 ln -s ${GOROOT}/bin/go /usr/bin/go
 # 5.设置环境变量
@@ -34,6 +34,6 @@ grep "go\ env" ~/.bashrc && echo "go env existed" || setGoEnv ${GOROOT} ${GOPATH
 # 6.生效
 source ~/.bashrc
 # 7.安装git
-yum install -y git
+yum install -y git >/dev/null 2>&1
 # 8.删除安装包
 rm -rf ./go${GOVERSION}.linux-amd64.tar.gz
