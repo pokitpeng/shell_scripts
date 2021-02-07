@@ -10,7 +10,7 @@ set -e
 PKG_DIR=/usr/local
 GOROOT=${PKG_DIR}/go
 GOPATH=${PKG_DIR}/gopath
-GOVERSION=1.15.5
+GOVERSION=1.15.8
 function setGoEnv() {
     cat <<EOF >>~/.bashrc
 ######go env######
