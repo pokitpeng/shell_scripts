@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# 使用方法：curl -sLf https://gitee.com/banbaolatiao/shell_scripts/raw/master/install_golang/install_golang.sh 1.16 | bash
+# 使用方法：curl -sLf https://gitee.com/banbaolatiao/shell_scripts/raw/master/install_golang/install_golang.sh | bash
 
 # 遇到错误退出
 set -e
