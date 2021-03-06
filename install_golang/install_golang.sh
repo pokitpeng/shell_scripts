@@ -60,7 +60,7 @@ function setGoEnv() {
 ### GO ENV
 export GOROOT=${1}
 export GOPATH=${2}
-export GO11MODULE=on
+export GO111MODULE=on
 export GOPROXY=https://goproxy.io,direct
 export PATH="${1}/bin:$PATH"
 export PATH="${2}/bin:$PATH"
